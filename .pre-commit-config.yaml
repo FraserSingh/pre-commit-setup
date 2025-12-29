@@ -1,0 +1,41 @@
+- id: black
+  name: black
+  entry: black
+  language: python
+  types: [python]
+
+- id: ruff
+  name: ruff
+  entry: ruff
+  language: python
+  types_or: [python, pyi, jupyter]
+  args: ["--no-fix"]
+
+- id: nbstripout
+  name: nbstripout
+  entry: nbstripout
+  language: python
+  types: [jupyter]
+
+- id: bandit
+  name: bandit
+  entry: bandit -r .
+  language: python
+  pass_filenames: false
+
+- id: detect-secrets
+  name: detect-secrets
+  entry: detect-secrets-hook
+  language: python
+
+- id: sqlfluff-lint
+  name: sqlfluff lint
+  entry: sqlfluff lint
+  language: python
+  types: [sql]
+
+- id: sqlfluff-fix
+  name: sqlfluff fix
+  entry: sqlfluff fix
+  language: python
+  types: [sql]
