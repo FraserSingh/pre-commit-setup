@@ -9,7 +9,7 @@
   name: ruff
   entry: ruff
   language: python
-  types_or: [python, pyi, jupyter]
+  types_or: [python, pyi]
   additional_dependencies: ["ruff>=0.14.10"]
 
 - id: nbstripout
