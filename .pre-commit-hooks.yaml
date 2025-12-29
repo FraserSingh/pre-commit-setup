@@ -3,39 +3,45 @@
   entry: black
   language: python
   types: [python]
+  additional_dependencies: ["black==25.12.0"]
 
 - id: ruff
   name: ruff
   entry: ruff
   language: python
   types_or: [python, pyi, jupyter]
-  args: ["--no-fix"]
+  additional_dependencies: ["ruff==0.0.293"]
 
 - id: nbstripout
   name: nbstripout
   entry: nbstripout
   language: python
   types: [jupyter]
+  additional_dependencies: ["nbstripout==0.8.2"]
 
 - id: bandit
   name: bandit
   entry: bandit -r .
   language: python
   pass_filenames: false
+  additional_dependencies: ["bandit==1.7.8"]
 
 - id: detect-secrets
   name: detect-secrets
   entry: detect-secrets-hook
   language: python
+  additional_dependencies: ["detect-secrets==1.4.0"]
 
 - id: sqlfluff-lint
   name: sqlfluff lint
   entry: sqlfluff lint
   language: python
   types: [sql]
+  additional_dependencies: ["sqlfluff==1.4.5"]
 
 - id: sqlfluff-fix
   name: sqlfluff fix
   entry: sqlfluff fix
   language: python
   types: [sql]
+  additional_dependencies: ["sqlfluff==1.4.5"]
